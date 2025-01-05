@@ -44,7 +44,8 @@ python3 tg_bot.py
 
 ## Пример работы
 Вы можете протестировать проект в [телеграмм боте](https://t.me/OOP_Segmentation_bot)
-[plot](video.gif)
+![пример](video.gif)<img src="example.gif" width="200" height="100">
+
 
 ## Лицензия
 
