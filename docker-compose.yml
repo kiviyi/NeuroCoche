@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  # Сервис для работы с RabbitMQ (worker.py)
+  worker:
+    build: .
+    volumes:
+      - .:/app
+    depends_on:
+      - rabbitmq
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+    command: bash -c "python worker.py"
+
+  # Сервис для Telegram-бота
+  tg_bot:
+    build: .
+    volumes:
+      - .:/app
+    depends_on:
+      - rabbitmq
+    command: python tg_bot.py
+
+  # Сервис для RabbitMQ
+  rabbitmq:
+    image: "rabbitmq:management"
+    ports:
+      - "5672:5672"
+      - "15672:15672"  # Админка RabbitMQ

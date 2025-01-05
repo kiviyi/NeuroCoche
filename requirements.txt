@@ -1,0 +1,8 @@
+pika
+telebot
+tf-keras
+numpy
+matplotlib
+torch
+torchvision
+pillow
