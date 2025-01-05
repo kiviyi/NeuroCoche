@@ -4,7 +4,7 @@ import os
 
 from validator import Validator
 
-token = '5945863355:AAGGTTUlRDQhXXqWI1CiR9EkGVXI7pof69E'
+token = ''
 bot = telebot.TeleBot(token)
 
 RABBITMQ_HOST = 'localhost'
